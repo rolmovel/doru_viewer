@@ -1,5 +1,9 @@
 # Capability: Data Ingestion
 
+## Purpose
+
+Garantizar que los CSV y documentos provenientes del scraping se carguen de forma controlada, validada y trazable antes de alimentar los motores de consulta.
+
 ## Overview
 
 Ingesta diaria de archivos CSV (y documentos adjuntos) generados por un pipeline de scraping externo. Garantiza que solo datos válidos y completos se almacenen en S3 y se transformen en registros normalizados listos para indexación y consulta.

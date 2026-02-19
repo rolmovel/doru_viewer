@@ -1,5 +1,9 @@
 # Capability: Incident Index
 
+## Purpose
+
+Mantener un registro estructurado y consultable de los incidentes ingeridos, garantizando acceso rápido, agregados consistentes y retención controlada.
+
 ## Overview
 
 Responsable de transformar registros validados en entidades consultables: almacena datos estructurados en DynamoDB, calcula agregados para el mapa/tabla, y garantiza consultas rápidas y consistentes bajo SLAs definidos.
@@ -64,7 +68,7 @@ Los datos MUST estar disponibles en ≤15 minutos tras cada ingestión y mantene
 
 ### Requirement: Data Retention & Lifecycle
 
-Implementar retención mínima de 12 meses con políticas: S3 `analytics` pasa a IA a los 90 días y a Glacier al año, DynamoDB habilita PITR y opcionalmente TTL para datos >24 meses.
+La plataforma MUST implementar retención mínima de 12 meses con políticas: S3 `analytics` pasa a IA a los 90 días y a Glacier al año, DynamoDB habilita PITR y opcionalmente TTL para datos >24 meses.
 
 #### Scenario: PITR restore
 

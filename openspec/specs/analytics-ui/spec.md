@@ -1,5 +1,9 @@
 # Capability: Analytics UI
 
+## Purpose
+
+Ofrecer a los analistas una interfaz web segura para explorar incidentes mediante mapa y tabla, con filtros rápidos y acceso a documentos.
+
 ## Overview
 
 Aplicación web interna que muestra incidentes en un mapa interactivo y tabla paginada, con filtros por periodo, país y categoría. Debe ser responsiva, segura y reflejar datos en ≤15 minutos tras la ingesta.

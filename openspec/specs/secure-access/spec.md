@@ -1,5 +1,9 @@
 # Capability: Secure Access
 
+## Purpose
+
+Definir el mínimo control de identidad y seguridad necesario para que analistas y proveedores accedan al sistema de forma segura sin gestión compleja de roles.
+
 ## Overview
 
 Garantiza que solo usuarios autorizados puedan cargar CSV y acceder a la aplicación web. Incluye autenticación Cognito, soporte para VPN/IP allowlist, políticas de S3/KMS, generación de URLs firmadas y auditoría de descargas.
@@ -22,7 +26,7 @@ Los usuarios de la aplicación web MUST autenticarse mediante Amazon Cognito (o 
 
 ### Requirement: Ingestion Credentials
 
-La carga de CSVs se realizará mediante usuarios de plataforma (IAM Users o Service Accounts) con permisos mínimos sobre los buckets necesarios. Alta/baja de estos usuarios se gestionará manualmente.
+La carga de CSVs SHALL realizarse mediante usuarios de plataforma (IAM Users o Service Accounts) con permisos mínimos sobre los buckets necesarios. Alta/baja de estos usuarios se gestionará manualmente.
 
 #### Scenario: Provision ingestion user
 

@@ -1,5 +1,9 @@
 # Capability: Infra Terraform
 
+## Purpose
+
+Proveer una base reproducible para desplegar y mantener toda la infraestructura AWS del proyecto mediante Terraform/CDK, evitando configuraciones manuales.
+
 ## Overview
 
 Define la infraestructura como código para desplegar la plataforma en AWS usando Terraform (preferido) o AWS CDK equivalente. Incluye módulos, variables, estados remotos y guía operativa para múltiples entornos.
@@ -31,7 +35,7 @@ Terraform state SHALL almacenarse en S3 backend cifrado con DynamoDB lock para e
 
 ### Requirement: Variables & Secrets
 
-Variables MUST gestionarse mediante archivos `.tfvars` por entorno; secretos (p.ej. Slack webhook) se inyectan vía AWS Secrets Manager y nunca en texto plano.
+Las variables MUST gestionarse mediante archivos `.tfvars` por entorno; cualquier secreto (p.ej. Slack webhook) SHALL inyectarse vía AWS Secrets Manager y nunca en texto plano.
 
 #### Scenario: Missing secret
 
@@ -40,7 +44,7 @@ Variables MUST gestionarse mediante archivos `.tfvars` por entorno; secretos (p.
 
 ### Requirement: Deployment Guide
 
-Debe existir guía `docs/infra/deploy.md` con pasos: prerequisitos (AWS CLI, Terraform >=1.6), comandos (`terraform init/plan/apply`), y rollback.
+La documentación MUST incluir guía `docs/infra/deploy.md` con pasos: prerequisitos (AWS CLI, Terraform >=1.6), comandos (`terraform init/plan/apply`), y proceso de rollback.
 
 #### Scenario: First-time setup
 

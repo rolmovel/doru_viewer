@@ -1,5 +1,9 @@
 # Capability: Observability & Communications
 
+## Purpose
+
+Establecer la cobertura mínima de métricas, alertas y comunicación operativa para detectar fallos en la ingesta, almacenamiento y UI.
+
 ## Overview
 
 Define métricas, alertas y notificaciones para la ingesta, almacenamiento y UI. Abarca CloudWatch, SNS/SES/Slack, dashboards y runbooks básicos para responder a incidentes operativos.
@@ -54,7 +58,7 @@ Todas las alertas críticas SHALL entregarse por SES (email SOC) y Slack Webhook
 
 ### Requirement: Runbook References
 
-Cada alerta debe enlazar a runbook con pasos de diagnóstico (ubicado en `docs/runbooks/`).
+Cada alerta SHALL enlazar a un runbook con pasos de diagnóstico (ubicado en `docs/runbooks/`).
 
 #### Scenario: On-call response
 
